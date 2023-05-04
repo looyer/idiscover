@@ -25,6 +25,11 @@ Learning/Golang/Example/liblcl.dll
 Learning/Cpp/Bookcpp/LinuxC/libstack.so
 
 #屏蔽以下文件夹
+learning/openglcn/sample-low/build/
+learning/openglcn/freeglut/
+learning/openglcn/glew-2.1.0/
+learning/openglcn/gameplay/build/
+
 Knowledge/Private/Password.txt 
 
 Learning/Cpp/CMake/Demo1/build/

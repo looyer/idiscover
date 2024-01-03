@@ -25,6 +25,9 @@ Learning/Golang/Example/liblcl.dll
 Learning/Cpp/Bookcpp/LinuxC/libstack.so
 
 #屏蔽以下文件夹
+homework/voice0golang/client-dir/
+homework/voice0golang/server-dir/
+
 learning/openglcn/sample-low/build/
 learning/openglcn/freeglut/
 learning/openglcn/glew-2.1.0/

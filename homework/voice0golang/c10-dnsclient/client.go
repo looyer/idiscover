@@ -7,7 +7,8 @@ import (
 )
 
 var (
-	UPort int = 22010
+	UPort int    = 22010
+	QHost string = "www.baidu.com"
 )
 
 func main() {
@@ -19,13 +20,14 @@ func main() {
 	log.Printf("--cmd--line-- uport:%v", UPort)
 
 	// UseUDP()
-	hoststr := "www.baidu.com"
-	list := DNSQuery("223.5.5.5", hoststr)
-	log.Printf("host:%v -dns-> iplist:%v", hoststr, list)
+	// hoststr := "www.baidu.com"
+	list := DNSQuery("223.5.5.5", QHost)
+	log.Printf("host:%v -dns-> iplist:%v", QHost, list)
 }
 
 func commandline() {
 	flag.IntVar(&UPort, "uport", UPort, "srv-port: 服务器UDP端口")
+	flag.StringVar(&QHost, "query", QHost, "需要查询的domain-name")
 
 	flag.Parse()
 }

@@ -49,7 +49,7 @@ func DNSQuery(dnsServe, host string) (ans []string) {
 	qs := questionSection(host)
 	buf.Write(qs)
 
-	log.Print(buf)
+	// log.Print(buf)
 
 	//请求和接收数据
 	_, err = conn.Write(buf.Bytes())
@@ -61,7 +61,7 @@ func DNSQuery(dnsServe, host string) (ans []string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Print(n, recvbuf[:n])
+	// log.Print(n, recvbuf[:n])
 
 	return parseReply(recvbuf[:n])
 }
@@ -99,7 +99,7 @@ func parseReply(buf []byte) (ans []string) {
 	header.NumAuthority = binary.BigEndian.Uint16(buf[8:])
 	header.NumAdditional = binary.BigEndian.Uint16(buf[10:])
 
-	log.Print(header)
+	// log.Print(header)
 
 	//去掉问题部分
 	body := buf[12:]
@@ -145,7 +145,7 @@ func parseAnswer(rr []byte) string {
 	reslen := binary.BigEndian.Uint16(rr[2+2+2+4:])
 	ipos := 2 + 2 + 2 + 4 + 2
 
-	log.Print(rr)
+	// log.Print(rr)
 
 	if ctype == Type_RR_IP {
 		if reslen == 4 {
@@ -156,12 +156,12 @@ func parseAnswer(rr []byte) string {
 		cname := ""
 		for {
 			if ipos > len(rr) {
-				return strings.TrimSuffix(cname, ".")
+				return cname + "com"
 			}
 			n := int(rr[ipos])
 			ipos++
 			if ipos+n > len(rr) {
-				return strings.TrimSuffix(cname, ".")
+				return cname + "com"
 			}
 			cname += string(rr[ipos:ipos+n]) + "."
 			ipos += n

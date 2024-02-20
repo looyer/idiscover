@@ -45,6 +45,8 @@
     Series[f, {x,x0,order}]             #求Taylor幂级数展开 
     Limit[f, x->x0]                     #求极限
     Minimize[f, x]                      #求最小值
+    TrigExpand[Sin[a+b]]                #三角函数展开 
+    TrigReduce[2Sin[x]Cos[x]]           #三角函数约化
     
 ##  4.核心语法     
     规则相关：     
@@ -85,16 +87,24 @@
         v1.v2 和 Dot[v1, v2]            #点积
         Cross[a, b]                     #叉积
         v1 [ESC]cross[ESC] v2           #叉积
+        m[[r1;;r2, c1;;c2]]             #取矩阵m的子矩阵从r1-r2行，c1-c2列
         DiagonalMatrix[v]               #给出对角矩阵，diag(M) = v
         MatrixForm[M]                   #以矩阵形式显示M
         Tr[M]                           #矩阵M的迹 sum(diag(M))
         Det[M]                          #矩阵M的行列式
+        MatrixRank[M]                   #矩阵M的秩
+        RowReduce[M]                    #给出矩阵行约减
+        LinearSolve[M,b]                #求解MX=b
         Inverse[M]                      #矩阵的逆
         m1.m2 和 Dot[m1, m2]            #矩阵乘法 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         MatrixPower[M, n]               #矩阵的幂
+        expr(#)&@v                      #相当于expr(v), '#'是参数占位符
+        Riffle[list, ele]               #在list中交错放置ele
+        Total[list]                     #列表求和
+        Sum[expr, {i, imax}]            #表达式求和
+        Accumulate[list]                #逐次累加生成新列表 {list[1], list[1]+list[2], ..., list[1]+list[2]+...+list[n]}
 
-        
-
+    定义置换：(群论)   
 
 
 

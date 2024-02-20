@@ -4,8 +4,8 @@ import "flag"
 
 var (
 	UniCloudCode string = "" //https://cloud.unidoc.io 上申请的app-secret
-	InputPDF     string = "C:/Users/looye/Desktop/mathematics/test.pdf"
-	OuterPDF     string = "华章数学译丛55-代数 原书第2版 反色.pdf"
+	InputPDF     string = "C:/Users/looye/Desktop/mathematics/Algebra_Artin_clear8.pdf"
+	OuterPDF     string = "Algebra_Artin.pdf"
 	LogDir       string = "./logs/" //日志文件所在
 )
 

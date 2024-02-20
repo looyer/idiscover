@@ -6,5 +6,6 @@ use (
 	./homework/voice0golang/c09-server
 	./homework/voice0golang/c10-dnsclient
 	./homework/voice0golang/c10-udpserver
+	./homework/voice0golang/c12-interface-reflect
 	./projects/go-mypdf
 )

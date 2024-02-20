@@ -18,7 +18,7 @@ import (
 	"go-mypdf/src/conf"
 )
 
-//./cmd.exe -unicode b53da9190c3841a24842dab33af2c30579e2b84a20293efcb093b640a13d5ff1 -input ./Algebra_Artin_clear8.pdf -outer ./Algebra-Artin-InvertColor.pdf
+//./cmd.exe -unicode xxx -input ./Algebra_Artin_clear8.pdf -outer ./Algebra-Artin-InvertColor.pdf
 
 func main() {
 	fmt.Println("~~~~~~~~~  go-pdf  ~~~~~~~~~")

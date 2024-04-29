@@ -1,4 +1,4 @@
-go 1.21.0
+go 1.21.1
 
 use (
 	./homework/voice0golang/c09-client
@@ -7,5 +7,14 @@ use (
 	./homework/voice0golang/c10-dnsclient
 	./homework/voice0golang/c10-udpserver
 	./homework/voice0golang/c12-interface-reflect
+	./learning/gopackage/go-byexample/go-advanced
+	./learning/gopackage/go-byexample/go-advanced02
+	./learning/gopackage/go-byexample/go-byfree
+	./learning/gopackage/go-ebiten/hello-ebiten
+	./learning/gopackage/go-opencv/hellocv
+	./learning/gopackage/go-opencv/tutorial01-showimage
+	./learning/gopackage/go-opengl/hellogl
+	./learning/gopackage/go-websocket/echo-client
+	./learning/gopackage/go-websocket/echo-server
 	./projects/go-mypdf
 )

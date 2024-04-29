@@ -257,8 +257,11 @@ func inverseColor(k int, gimg image.Image) *image.RGBA {
 			c := gimg.At(x, y)
 			r, g, b, a := c.RGBA()
 			r0, g0, b0, a0 := uint8(255-r), uint8(255-g), uint8(255-b), uint8(a) //黑白反转
-			if r0 < 31 && g0 < 31 && b0 < 31 {                                   //纯黑调色
-				r0, g0, b0 = 31, 31, 31
+			// if r0 < 31 && g0 < 31 && b0 < 31 {                                   //纯黑调色
+			// 	r0, g0, b0 = 31, 31, 31
+			// }
+			if r0 > 220 && g0 > 220 && b0 > 220 {
+				r0, g0, b0 = 220, 220, 220
 			}
 			newimg.SetRGBA(x, y, color.RGBA{R: r0, G: g0, B: b0, A: a0})
 		}

@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option go_package = "share/meproto";
+
+package meproto;
+
+enum Opcode {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //Common OpcodeID
+    ID_Null                             = 0;
+    ID_CommonMessage                    = 1;
+    ID_ErrorMessage                     = 2;
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+enum ErrorCode {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //Common Error
+    Error_OK                            = 0; //None Error, Success!
+    Error_Parameter                     = 1;
+    Error_Config                        = 2;
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+enum EnumAttribute {
+    Attr_CurHP                          = 0;
+    Attr_MaxHP                          = 1;
+    Attr_CurMP                          = 2;
+    Attr_MaxMP                          = 3;   
+    Attr_MinPhyDam                      = 4;
+    Attr_MaxPhyDam                      = 5;      
+    Attr_Armor                          = 6;      
+    Attr_Dodge                          = 7;      
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//All other message pack to this message buffer
+message CommonMessage {
+    Opcode Opcode       = 1;
+    bytes  Buffer       = 2;
+}
+
+message ErrorMessage {
+    ErrorCode Code      = 1;
+    string ErrorString  = 2;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+

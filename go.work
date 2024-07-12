@@ -10,10 +10,17 @@ use (
 	./learning/gopackage/go-byexample/go-advanced
 	./learning/gopackage/go-byexample/go-advanced02
 	./learning/gopackage/go-byexample/go-byfree
+	./learning/gopackage/go-byexample/go-libuse
 	./learning/gopackage/go-ebiten/hello-ebiten
+	./learning/gopackage/go-grpc/go-message
+	./learning/gopackage/go-grpc/meproto
+	./learning/gopackage/go-ip2location/sample
+	./learning/gopackage/go-kcp/kcp-client
+	./learning/gopackage/go-kcp/kcp-server
 	./learning/gopackage/go-opencv/hellocv
 	./learning/gopackage/go-opencv/tutorial01-showimage
 	./learning/gopackage/go-opengl/hellogl
+	./learning/gopackage/go-opengl/tutorial01-gl41core
 	./learning/gopackage/go-websocket/echo-client
 	./learning/gopackage/go-websocket/echo-server
 	./projects/go-mypdf

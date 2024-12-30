@@ -47,3 +47,23 @@ message ErrorMessage {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//test keyword: one_of  //union type
+message Farmland {
+    int32  ID       = 1;
+    int64  DoneTime = 2;
+}
+message Factory {
+    repeated int32 ListOK   = 1;
+    repeated int32 ListIn   = 2;
+    int64  DoneTime         = 3;
+}
+
+message Building {
+    int64  UUID                 = 1;
+    int32  ID                   = 2;
+    optional Farmland Land      = 3;
+    optional Factory  Factory   = 4;
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
